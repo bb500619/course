@@ -1,0 +1,21 @@
+<h2>課程瀏覽</h2>
+
+<%=form_tag articles_path,method:"get" do%>
+課程名稱 <%=text_field_tag :title%>
+授課老師<%=text_field_tag :content%>
+上課時間<%=text_field_tag :coursetime%>
+<div>
+<%=submit_tag "開始搜尋"%>
+</div>
+<%end%>
+
+<% @articles.each do|article|%>
+<%= link_to article.title,article_path(article) %>
+<div>
+<%= link_to "編輯課程",edit_article_path(article)%>
+</div>
+<div>
+<%= link_to "刪除課程",article_path(article),method:"delete"%>
+</div>
+<%end%>
+<%= link_to"回到首頁",root_path %>

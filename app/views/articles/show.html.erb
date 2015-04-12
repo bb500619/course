@@ -1,0 +1,14 @@
+<h2>課程細目</h2>
+<p>課程名稱:<%= @article.title%></p>
+
+<p>
+ 授課老師:
+ <%= @article.content%>
+</p>
+<p>
+上課時間:
+ <%= @article.coursetime%>
+</p>
+<p>
+<%= link_to"回到課程瀏覽",articles_path %>
+</p>

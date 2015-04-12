@@ -1,0 +1,15 @@
+<h2>新增課程</h2>
+<%=form_for @article do|f|%>
+<div>
+課程名稱
+<%=f.text_field :title%>
+</div>
+<div>
+授課老師
+<%=f.text_area :content%>
+</div>
+上課時間
+<%=f.text_area :coursetime%>
+</div>
+<%=f.submit%>
+<%end%>
